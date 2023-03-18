@@ -21,3 +21,14 @@ To run a cluster of servers, you need to place your servers behind a load balanc
 
 ## Required services
 Serverpod will not run without a link to a Postgres database with the correct tables added. Serverpod can also use Redis. You enable Redis in your configuration files.
+
+## RUN SERVERPOD ON ORACLE CLOUD (VPS)
+1. Create a instance and install aapanel (https://www.youtube.com/watch?v=nJ1Hx5HmgHs)
+2. Install postgresql since command or install postgreSQL manager since aapanel
+3. Install docker (https://www.freecodecamp.org/news/run-a-postgres-docker-container-on-oracle-cloud-infrastructure/)
+4. Install docker manager since aapanel (optional)
+5. Connect to the DB server by using the public IP as the host, 5432 as the port, postgres as the username, the POSTGRES_PASSWORD as the password and connect to the testdb. Save the connect and you should now be able to access your DB.
+6. Create the tables of the archive tables-serverpod.pgsql
+7. Configure your archives production.yaml and password.yaml with the information of the docker.
+8. Run the command in mode production
+9. Enjoy of SERVERPOD
